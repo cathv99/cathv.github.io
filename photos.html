@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photos</title>
+<style type="text/css">
+.auto-style2 {
+		margin-left:0px
+		}
+	
+	th {
+		background-color:#2A75C5;
+		padding:2px; 
+		color:#fff; 
+		vertical-align:middle
+		}
+
+	table td {
+		padding:0; 
+		border-width:0; 
+		vertical-align:top
+		}
+* {box-sizing: border-box}
+body{
+background-color:black;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 0.8em;
+text-align:left;
+color: #3d6c87;
+}
+#show{
+position:relative;
+float:right;
+}
+</style>
+<link href="style2.css" rel="stylesheet" type="text/css" />
+<script>
+var myimages = new Array();
+	myimages[0] = "img/myphotos/01-08-2012.jpg";
+	myimages[1] = "img/myphotos/04-07-2017.jpg";
+	myimages[2] = "img/myphotos/06-06-2014.jpg";
+	myimages[3] = "img/myphotos/25-05-2014.jpg";
+	myimages[4] = "img/myphotos/28-06-2015.jpg";
+
+	var thesi = 0;
+			
+	function previous() {
+		thesi--;
+		if (thesi == -1) thesi = myimages.length-1;
+		document.getElementById("eikona").src = myimages[thesi];	
+	}
+			
+	function next() {
+		thesi++;
+		if (thesi == myimages.length) thesi = 0;
+		document.getElementById("eikona").src = myimages[thesi];	
+	}
+</script>
+</head>
+<body>
+<!--Begin Container-->
+<div id="container" style="height: 525px">
+	<!--Begin Masthead-->
+	<div id="masthead" style="width: 798px">
+		<h1>Τμήμα Πληροφορικής</h1>
+	</div>
+	<!--End Masthead-->
+	<!--Begin Navigation-->
+	<div id="navigation">
+		<ul>
+			<li><a href="study.html">Εκπαίδευση</a></li>
+			<li><a href="hobbies.html">Χόμπι</a></li>
+			<li><a href="photos.html">Φωτογραφίες</a></li>
+			<li><a href="aboutme.html">About</a></li>
+		</ul>
+	</div>
+	<!--End Navigation-->
+	<!--Begin Content-->
+<div id="content" class="auto-style2" style="width: 618px; height: 436px">
+<p>In my spare time i do like taking</p>
+<p>photos and here are some of the</p>
+<p>ones i like particularly.</p>
+<br>
+<div id="show" style="width: 308px; left: -82px; top: -75px;">
+<img id="eikona" width="383" height="347" src="img/myphotos/01-08-2012.jpg"><br>
+<input type="button" value="Προηγούμενο" onclick="previous()">&nbsp;
+<input type="button" value="Επόμενο" onclick="next()">
+</div>
+</div>
+<!--End Content-->
+</div>
+<!--End Container-->
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Hobbies</title>
+<style type="text/css">
+.auto-style2 {
+		margin-left:0px
+		}
+	
+	th {
+		background-color:#2A75C5;
+		padding:2px; 
+		color:#fff; 
+		vertical-align:middle
+		}
+
+	table td {
+		padding:0; 
+		border-width:0; 
+		vertical-align:top
+		}
+* {box-sizing: border-box}
+body{
+background-color:black;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size: 0.8em;
+text-align:left;
+color: #3d6c87;
+}
+#show1{
+float:right;
+padding:10px;
+}
+#show2{
+float:right;
+padding:10px;
+}
+</style>
+<link href="style2.css" rel="stylesheet" type="text/css"/>
+<script>
+var myimagesSeries = new Array();
+	myimagesSeries[0] = "img/tvseries/agentsofshield.jpg";
+	myimagesSeries[1] = "img/tvseries/arrow.jpg";
+	myimagesSeries[2] = "img/tvseries/doctorwhoseries.jpeg";
+	myimagesSeries[3] = "img/tvseries/fringe.jpg";
+	myimagesSeries[4] = "img/tvseries/legacies.jpg";
+	myimagesSeries[5] = "img/tvseries/legendsoftomorrow.jpg";
+	myimagesSeries[6] = "img/tvseries/ncis.jpg";
+	myimagesSeries[7] = "img/tvseries/the100.jpg";
+	myimagesSeries[8] = "img/tvseries/theoriginals.jpg";
+	myimagesSeries[9] = "img/tvseries/torchwood.jpg";
+
+	var thesi1 = 0;
+			
+	function previousSeries() {
+		thesi1--;
+		if (thesi1 == -1) thesi = myimagesSeries.length-1;
+		document.getElementById("eikonaSeries").src = myimagesSeries[thesi1];	
+	}
+			
+	function nextSeries() {
+		thesi1++;
+		if (thesi1 == myimagesSeries.length) thesi1 = 0;
+		document.getElementById("eikonaSeries").src = myimagesSeries[thesi1];	
+	}
+	
+var myimagesMovies = new Array();
+	myimagesMovies[0] = "img/movies/avengers.jpg";
+	myimagesMovies[1] = "img/movies/camprock2.jpg";
+	myimagesMovies[2] = "img/movies/fastandfurious.jpg";
+	myimagesMovies[3] = "img/movies/harrypotter.jpg";
+	myimagesMovies[4] = "img/movies/hsm3.jpg";
+	myimagesMovies[5] = "img/movies/nowyouseeme2.jpg";
+	myimagesMovies[6] = "img/movies/percyjackson.jpg";
+	myimagesMovies[7] = "img/movies/pitchperfect3.jpg";
+	myimagesMovies[8] = "img/movies/stepup2.jpg";
+	myimagesMovies[9] = "img/movies/x-men.jpg";
+	
+	var thesi2 = 0;
+			
+	function previousMovies() {
+		thesi2--;
+		if (thesi2 == -1) thesi = myimagesMovies.length-1;
+		document.getElementById("eikonaMovies").src = myimagesMovies[thesi2];	
+	}
+			
+	function nextMovies() {
+		thesi2++;
+		if (thesi2 == myimagesMovies.length) thesi2 = 0;
+		document.getElementById("eikonaMovies").src = myimagesMovies[thesi2];	
+	}	
+</script>
+</head>
+<body>
+<!--Begin Container-->
+<div id="container" style="height: 525px">
+	<!--Begin Masthead-->
+	<div id="masthead" style="width: 798px">
+		<h1>Τμήμα Πληροφορικής</h1>
+	</div>
+	<!--End Masthead-->
+	<!--Begin Navigation-->
+	<div id="navigation">
+		<ul>
+			<li><a href="study.html">Εκπαίδευση</a></li>
+			<li><a href="hobbies.html">Χόμπι</a></li>
+			<li><a href="photos.html">Φωτογραφίες</a></li>
+			<li><a href="aboutme.html">About</a></li>
+		</ul>
+	</div>
+	<!--End Navigation-->
+	<!--Begin Content-->
+<div id="content" class="auto-style2" style="width: 618px; height: 436px">
+<p>In my spare time i like listening to music</p>
+<p>and play games. Also i am an avid fan of tv series</p>
+<p>and movies and here are 10 titles of each kind that i like.</p>
+<br>
+<div id="show1" style="width: 308px; left: -82px; top: -75px;">
+<img id="eikonaSeries" width="202" height="253" src="img/tvseries/agentsofshield.jpg"><br>
+<input type="button" value="Προηγούμενο" onclick="previousSeries()">&nbsp;
+<input type="button" value="Επόμενο" onclick="nextSeries()">
+</div>
+<div id="show2">
+<img id="eikonaMovies" width="202" height="253" src="img/movies/avengers.jpg"><br>
+<input type="button" value="Προηγούμενο" onclick="previousMovies()">&nbsp;
+<input type="button" value="Επόμενο" onclick="nextMovies()">
+</div>
+
+</div>
+<!--End Content-->
+</div>
+<!--End Container-->
+</body>
+</html>
